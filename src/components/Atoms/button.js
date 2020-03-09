@@ -8,9 +8,22 @@ class CustomButton extends PolymerElement {
           display: block;
         }
         button {
-          color: blue;
+          font-weight: 400;
+          line-hight: 1.25;
+          padding: .5rem 1rem;
+          font-size: 1rem;
+          border-radius: .25rem;
+          color: #fff;
+          backgroung-color: var(--app-primary-color, blue);
+          transition: all .2s ease-in-out;
+        }
+        button:hover {
+          background-color: #fff;
+          color: var(--app-primary-color, blue);
+          border-color: var(--app-primary-color, blue);
         }
       </style>
+
       <button type="button">Button</button>
     `
   }
