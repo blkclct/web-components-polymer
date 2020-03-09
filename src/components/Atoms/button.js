@@ -10,11 +10,12 @@ class CustomButton extends PolymerElement {
         button {
           font-weight: 400;
           line-hight: 1.25;
+          border: 1px solid transparent;
           padding: .5rem 1rem;
           font-size: 1rem;
           border-radius: .25rem;
           color: #fff;
-          backgroung-color: var(--app-primary-color, blue);
+          background-color: var(--app-primary-color, blue);
           transition: all .2s ease-in-out;
         }
         button:hover {
@@ -24,8 +25,18 @@ class CustomButton extends PolymerElement {
         }
       </style>
 
-      <button type="button">Button</button>
+      <button type$="[[buttonType]]" name="button">[[buttonText]]</button>
     `
+  }
+  static get properties() {
+    return {
+      buttonText: {
+        type: String
+      },
+      buttonType: {
+        type: String
+      },
+    };
   }
   constructor() {
     super()
