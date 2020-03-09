@@ -1,4 +1,4 @@
-import { PolymerElement, html } from './node_modules/@polymer/polymer/polymer-element';
+import { PolymerElement, html } from '@polymer/polymer/polymer-element';
 
 class CustomButton extends PolymerElement {
   static get template() {
